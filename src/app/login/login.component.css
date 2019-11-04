@@ -1,0 +1,19 @@
+.loginFormCSS{
+    border: 1px solid rgb(175, 174, 174);
+    box-shadow: 1px 0px 50px 3px #d1d1d1f6;
+
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.mb10{
+    margin-bottom: 10px;
+}
+
+.mt500{
+    margin-top: 30%;
+}
+
+.loginFormCSS .nav-tabs .nav-link.active{
+    background-color: bisque;
+}

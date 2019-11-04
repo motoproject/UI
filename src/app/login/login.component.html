@@ -1,0 +1,75 @@
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col col-xs-4 col-sm-4 offset-sm-4 col-md-4 offset-md-4 col-lg-4 offset-lg-4 col-xl-4 offset-xl-4">
+      <div class="loginFormCSS mt500">
+
+        <ul class="nav nav-tabs mb10 tabbg" role="tablist">
+          <li class="nav-item" (click)="tabClick(selectedTab=1)">
+            <a class="nav-link" [ngClass]="{'active':selectedTab==1}" data-toggle="tab">SignUp</a>
+          </li>
+
+          <li class="nav-item" (click)="tabClick(selectedTab=2)">
+            <a class="nav-link" [ngClass]="{'active':selectedTab==2}" data-toggle="tab">Login</a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="login" class="container tab-pane" [ngClass]="{'active':selectedTab==2,'fade':selectedTab==1}">
+            <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+              <!-- <legend>Login</legend> -->
+            
+              <div class="form-group">
+                <label for="userName">Email</label>
+                <input type="text" formControlName="usr" class="form-control" id="userName" placeholder="Enter Email">
+              </div>
+            
+              <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" formControlName="pwd" class="form-control" id="pwd" placeholder="Enter password">
+              </div>
+              <div class="clearfix"></div>
+              <div>
+                <button type="submit" class="btn btn-info" [disabled]="loginForm.invalid">Login</button>
+              </div>
+            </form>
+          </div>
+
+          <div id="signup" class="container tab-pane" [ngClass]="{'active':selectedTab==1,'fade':selectedTab==2}">
+            <form [formGroup]="signupForm" (ngSubmit)="signup(signupForm.value)">
+              <!-- <legend>Login</legend> -->
+            
+              <div class="form-group">
+                <label for="userNameS">Username</label>
+                <input type="text" formControlName="usr" class="form-control" id="userNameS" placeholder="Enter username">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" formControlName="eml" class="form-control" id="email" placeholder="username@gmail.com">
+              </div>
+              
+              <div class="form-group">
+                <label for="pwdS">Password</label>
+                <input type="password" formControlName="pwd" class="form-control" id="pwdS" placeholder="Enter password">
+              </div>
+              <div class="clearfix"></div>
+              <div>
+                <button type="submit" class="btn btn-success" [disabled]="signupForm.invalid">SignUp</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- <a routerLink="/home">Home</a> -->
+
+</div>
+

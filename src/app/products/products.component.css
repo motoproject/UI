@@ -1,0 +1,25 @@
+.customizedTabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background-color: blanchedalmond !important;
+}
+
+.customizedTabs .nav-tabs{
+    margin-bottom: 10px;
+}
+
+.customizedTabs .tab-content .tab-pane{
+    border: 1px solid rgb(221, 221, 221);
+    background-color: rgba(190, 204, 255, 0.28);
+    min-width: 1000px;
+    min-height: 550px;
+    margin-bottom:20px;
+}
+
+.customizedTabs .tab-content .tab-pane .btn-group{
+    margin: 10px;
+}
+
+.loadMore{
+    cursor: pointer;
+    color: blue;
+    text-decoration-line: underline;
+}

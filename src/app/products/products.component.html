@@ -1,0 +1,67 @@
+<!-- <p>
+  products works!
+</p> -->
+<app-menu-header></app-menu-header>
+<div class="container topMarginContainer">
+  <div class="customizedTabs">
+    <div class="col-xs-12 col-sm-1-12 col-md-1-12 col-lg-1-12 col-xl-1-12">
+
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" (click)="tabClicks(selectedTab=1)">
+          <a class="nav-link" data-toggle="tab" [ngClass]="{'active':selectedTab==1}">All</a>
+        </li>
+        <li class="nav-item" (click)="tabClicks(selectedTab=2)">
+          <a class="nav-link" data-toggle="tab" [ngClass]="{'active':selectedTab==2}">Add Products</a>
+        </li>
+        <li class="nav-item" (click)="tabClicks(selectedTab=3)">
+            <a class="nav-link" data-toggle="tab" [ngClass]="{'active':selectedTab==3}">Remove Products</a>
+          </li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="all" class="container tab-pane" [ngClass]="{'active':selectedTab==1}">
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Id</th>
+                  <th>Created Date</th>
+                  <th>Due Date</th>
+                  <th>Address</th>
+                  <th>Company Name</th>
+                  <th>Invoice Name</th>
+                  <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of tableData">
+                    <td> {{item.invoiceId}} </td>
+                    <td> {{item.createdDate}} </td>
+                    <td> {{item.dueDate}} </td>
+                    <td> {{item.address}} </td>
+                    <td> {{item.companyName}} </td>
+                    <td> {{item.invoiceName}} </td>
+                    <td> {{item.price}} </td>
+                  </tr>
+                </tbody>
+            </table>
+            <span *ngIf="recordsFlag == false" class="float-right loadMore" (click)="all(lastRecordId)">Load More...</span>
+          </div>
+
+          <div class="col-xs-12 col-sm-1-12 col-md-1-12 col-lg-1-12 col-xl-1-12">
+            <div class="row">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-info"> Export PDF</button>
+                  <button type="button" class="btn btn-info" (click)="exportAsExcel()"> Export Excel</button>
+                </div>
+                <!-- <button type="button" class="btn btn-success btn-sm" (click)="all(lastRecordId)">Load More...</button> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

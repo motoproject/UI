@@ -1,0 +1,17 @@
+<!-- <p>
+  menu-header works! 
+</p> -->
+
+<!-- header -->
+<div id="header">
+  <h5> <span> Sales Management </span> </h5>
+</div>
+
+<!-- left menu -->
+<div id="leftMenu">
+  <ul>
+    <li *ngFor="let menuItem of menuDetails">
+      <a routerLink="/{{menuItem.MENU_URL | lowercase}}"><img src="../../assets//icons/{{menuItem.MENU_IMAGE}}" alt="{{menuItem.MENU_IMAGE}}"><span> {{menuItem.MENU_NAME | titlecase}} </span></a>
+    </li>
+  </ul>
+</div>
