@@ -13,12 +13,14 @@ import { CustomHttp } from './customHttp';
 
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 import { MenuHeaderModule } from './menu-header/menu-header.module';
+import { numbersOnlyDirective } from './CustomDirective/digitsonly.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
+    numbersOnlyDirective,
   ],
   imports: [
     BrowserModule,
