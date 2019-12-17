@@ -6,10 +6,20 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
+
+  userLoggedInFlag:boolean = false;
+
+
+  constructor(){
+
+  }
+
+  userLoggedIn(value){
+    this.userLoggedInFlag = value;
+  }
   
   canActivate(){
-    
-    return true;
+      return true;
   }
 
 
